@@ -28,7 +28,7 @@ function GetStr($string, $start, $end)
 }
 function Sammy0007proxys()
 {
-  $poxySocks = file("proxy.txt");
+  $poxySocks = file("socks5.txt");
   $myproxy = rand(0, sizeof($poxySocks) - 1);
   $poxySocks = $poxySocks[$myproxy];
   return $poxySocks;
