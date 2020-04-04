@@ -1,4 +1,7 @@
-ADD hq proxies/Use webhost/use rdp/use vpn A Cc Checker by Gourav This is Stripe 1-req checker this checker only authenticate the card,this checker don't charge #note-Stripe 1-req is right now not accepting luminati so this checker is working on Ssl proxies there may be so problem with proxies This checker is good for ccn, And old lives cvv Do this checker give Cvv live? answer=YES... Use good proxies
+Add hq proxies
+A Cc Checker by Gourav 
+This is Stripe 1-req checker. This checker only authenticate the card,this checker don't charge 
+#Note:-Stripe 1-req is right now not accepting luminati so this checker is working on hq proxies there may be so problem with proxies This checker is good for ccn, And old lives cvv Do this checker give Cvv live? answer=YES... Use good proxies
 
 ##Join Our group 
 
