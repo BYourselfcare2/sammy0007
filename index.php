@@ -105,7 +105,7 @@
               type: 'GET',
               async: true,
               success: function(resultado) {
-                if (resultado.match("#Aprovada")) {
+                if (resultado.match("Aprovada")) {
                   removelinha();
                   ap++;
                   aprovadas(resultado + "");
